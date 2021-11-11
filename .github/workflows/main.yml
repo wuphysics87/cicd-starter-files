@@ -10,6 +10,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Run make command
+    - name: Run make hello command
       run: |
         make hello
+  lint:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 5
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run make lint command
+      run: |
+        make lint
