@@ -22,4 +22,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run make lint command
       run: |
+        pip install pylint
         make lint
